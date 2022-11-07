@@ -7,7 +7,7 @@ import org.hl7.fhir.r4.model.Patient;
 public class SampleClient {
 
     public static void main(String[] theArgs) {
-
+        
         // Create a FHIR client
         FhirContext fhirContext = FhirContext.forR4();
         IGenericClient client = fhirContext.newRestfulGenericClient("http://hapi.fhir.org/baseR4");
@@ -15,13 +15,24 @@ public class SampleClient {
 
         // Search for Patient resources
         Bundle response = client
-                .search()
-                .forResource("Patient")
-                .where(Patient.FAMILY.matches().value("SMITH"))
-                .returnBundle(Bundle.class)
-                .execute();
+            .search()
+            .forResource("Patient")
+            .where(Patient.FAMILY.matches().value("SMITH"))
+            .sort().ascending(Patient.GIVEN)
+            .returnBundle(Bundle.class)
+            .execute();
 
+        // Read values from response using the ID's of each entry
+        response.getEntry().forEach((entry) -> {
+            Patient patient = client.read()
+            .resource(Patient.class)
+            .withId(entry.getResource().getId())
+            .execute();
 
+            //Format: First name , Last name , Birth Date
+            System.out.println(patient.getName().get(0).getGivenAsSingleString() + " , " + patient.getName().get(0).getFamily() + " , " + patient.getBirthDate());
+        });
+                  
     }
 
 }
