@@ -1,0 +1,23 @@
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class SampleClientIntermediateTest {
+    @Test
+    public void createClient() {
+        IGenericClient client;
+        FhirContext x;
+        create();
+        AssetContextComponent(x.getFhirContext() , client.getFhirContext());
+    }
+
+    @Test
+    public void readFile() {
+        IGenericClient client;
+        static ArrayList<String> lastNames = new ArrayList<>();     // ArrayList for last names 
+
+        create();
+        read();
+        assertFalse(lastNames.isEmpty());
+    }
+
+} 
