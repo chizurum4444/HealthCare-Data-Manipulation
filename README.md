@@ -22,8 +22,6 @@ This project is a skeleton project for using [HAPI FHIR](https://hapifhir.io) to
 
 * [ ] Sort the output so that the results are ordered by the patient's first name
 
-* [ ] Commit your work
-
 ### Intermediate Tasks:
 
 * [ ] Create a text file containing 20 different last names
@@ -40,6 +38,5 @@ This project is a skeleton project for using [HAPI FHIR](https://hapifhir.io) to
 
 * [ ] If there is enough time between runs, you should expect to see loop 2 with a shorter average response time than loop 1 and 3.
 
-* [ ] Please include unit tests for your work
+* [ ] Write Unit tests
 
-* [ ] Commit your work
