@@ -9,13 +9,13 @@ This project is a skeleton project for using [HAPI FHIR](https://hapifhir.io) to
   http://hapi.fhir.org/baseR4/Patient?family=SMITH
 
 
-### Basic Tasks:
+### Task 1:
 
 * [ ] Modify `SampleClient` so that it prints the first and last name, and birth date of each Patient to the screen
 
 * [ ] Sort the output so that the results are ordered by the patient's first name
 
-### Intermediate Tasks:
+### Task 2:
 
 * [ ] Create a text file containing 20 different last names
 
