@@ -2,9 +2,9 @@
 
 This project is a skeleton project for using [HAPI FHIR](https://hapifhir.io) to access a public [FHIR](http://hl7.org/fhir/) server hosted at [http://hapi.fhir.org/baseR4](http://hapi.fhir.org/baseR4).
 
-### Getting Started:
+### NOTE
 
-* [ ] Try clicking on the link below. It is a FHIR *Search* operation used to look for patients with the name "Smith". (This is a publically accessible test server used by people all over the world, so we don't control what data is on it. Sometimes you may find unexpected or weird data there.) 
+* [ ] Click on the link below. It is a FHIR *Search* operation used to look for patients with the name "Smith". (This is a publically accessible test server used by people all over the world) 
 
   http://hapi.fhir.org/baseR4/Patient?family=SMITH
 
